@@ -10,11 +10,12 @@ export default function RouteComponent() {
   return (
     <Router>
       <Routes>
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
+        <Route path="/" element={<Home />} />
+        <Route path="/games" element={<Index />} />
+        <Route path="/games/new" element={<New />} />
+        <Route exact path="/games/:id" element={<Show />} />
+        <Route path="/games/:id/edit" element={<Edit />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   )

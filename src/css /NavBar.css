@@ -1,0 +1,5 @@
+.nav {
+  grid-area: 1/ 2/ 2/ 5;
+  background-color: #718096;
+  color: aliceblue;
+}
