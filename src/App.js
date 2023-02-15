@@ -1,8 +1,9 @@
 import RouteComponent from "./Components/RouteComponent"
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <RouteComponent />
     </div>
   )

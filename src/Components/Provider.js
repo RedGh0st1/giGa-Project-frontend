@@ -2,20 +2,74 @@ import { createContext, useContext, useState } from "react"
 import axios from "axios"
 import NavBar from "../Components/NavBar"
 import Footer from "./Footer"
+import { useNavigate } from "react-router-dom"
 
+//  this creates the use custom hook object which can be imported with useContext with data inside of it
 export const ArchiveContext = createContext()
-export function useArchiveContextProvider() {
+
+export function useArchiveContext() {
   return useContext(ArchiveContext)
 }
 
-export function ArchiveProvider(props) {
+// this
+export function ArchiveProvider({ Children }) {
+  const navigate = useNavigate()
   const API = process.env.REACT_APP_API_URL
-  const [game, setGames] = useState([])
+  const [games, setGames] = useState({
+    title: " ",
+    platform: " ",
+    genre: " ",
+    number_of_players: " ",
+    ESRD_rating: " ",
+    publisher: " ",
+    developer: " ",
+    release_date: " ",
+    present: false,
+    digital: false,
+    image: " ",
+    description: " ",
+  })
+
+  const addGames = (newGame) => {
+    axios
+      .post(`${API}/games`, newGame)
+      .then(
+        () => {
+          navigate(`/games`)
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setGames(games)
+  }
+  const handleCheckboxChange = () => {
+    setGames({ ...games, digital: !games.digital })
+    setGames({ ...games, present: !games.present })
+  }
+
+  const handleTextChange = (event) => {
+    setGames({ ...games, [event.target.id]: event.target.value })
+  }
 
   return (
-    <ArchiveContext.Provider value={{ API, axios, game, setGames }}>
+    <ArchiveContext.Provider
+      value={{
+        API,
+        axios,
+        games,
+        setGames,
+        handleCheckboxChange,
+        handleSubmit,
+        handleTextChange,
+        addGames,
+      }}
+    >
       <NavBar />
-      {props}
+      {Children}
       <Footer />
     </ArchiveContext.Provider>
   )
