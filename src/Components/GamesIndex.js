@@ -1,17 +1,20 @@
 import React from "react"
-import { useEffect, useContext } from "react"
-import { ArchiveContext } from "./Provider"
+import { useEffect, useState } from "react"
+// import { ArchiveContext } from "./Provider"
 import Game from "./Game"
+import axios from "axios"
+const API = process.env.REACT_APP_API_URL
 
 export default function GamesIndex() {
-  const { games, setGames, API, axios } = useContext(ArchiveContext)
+  // const { API, axios } = useContext(ArchiveContext)
+  const [games, setGames] = useState([])
 
   useEffect(() => {
     axios
       .get(`${API}/games`)
       .then((response) => setGames(response.data))
       .catch((c) => console.warn("catch", c))
-  }, [API, axios, setGames])
+  }, [])
 
   return (
     <div className="games">

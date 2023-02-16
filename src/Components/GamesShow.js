@@ -1,11 +1,12 @@
 import React from "react"
-import { ArchiveContext } from "./Provider"
-import { useContext, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useParams, useNavigate, Link } from "react-router-dom"
+import axios from "axios"
+const API = process.env.REACT_APP_API_URL
 
 export default function GamesShow() {
-  const { API, axios, games, setGames } = useContext(ArchiveContext)
   const { id } = useParams()
+  const [games, setGames] = useState({})
   const navigated = useNavigate()
 
   function deleteGame() {
@@ -27,40 +28,26 @@ export default function GamesShow() {
       .then((res) => {
         setGames(res.data)
       })
-      .catch((c) => {
-        console.warn("catch", c)
-      })
-  }, [API, axios, setGames, id, games])
-  const [
-    title,
-    platform,
-    genre,
-    number_of_players,
-    esrd_rating,
-    publisher,
-    developer,
-    present,
-    release_date,
-    digital,
-    image,
-    description,
-  ] = games
+      .catch((c) => navigated("/"))
+  }, [id, navigated])
+
   return (
     <article className="details">
       <>
         <section>
-          <h3>{image}</h3>
-          <h3>{title}</h3>
-          {platform}
-          {genre}
-          {number_of_players}
-          {esrd_rating}
-          {publisher}
-          {developer}
-          {release_date}
-          {present}
-          {digital}
-          {description}
+          <h3>{games.image}</h3>
+          hello
+          <h3>{games.title}</h3>
+          {games.platform}
+          {games.genre}
+          {games.number_of_players}
+          {games.esrd_rating}
+          {games.publisher}
+          {games.developer}
+          {games.release_date}
+          {games.present}
+          {games.digital}
+          {games.description}
         </section>
         <div className="navigation">
           <div>
@@ -69,7 +56,7 @@ export default function GamesShow() {
             </Link>
           </div>
           <div>
-            <Link to={`/games/${games.id}/edit`}>
+            <Link to={`/games/${id}/edit`}>
               <button>Edit</button>
             </Link>
           </div>

@@ -55,13 +55,13 @@ tbody tr:nth-child(even) {
   background: #158030;
 }
 
-.New {
-  /* border: 1px solid gold;
+.new {
+  border: 1px solid gold;
   margin: auto;
-  width: 95%; */
+  width: 95%;
 }
 
-.New form {
+.new form {
   margin: auto;
   width: 95%;
 }
@@ -88,4 +88,115 @@ input[type="submit"] {
   width: 50%;
 }
 
-/* Review CSS */
+/* EDit form CSS */
+.editSnackHdg {
+  text-align: center;
+  color: antiquewhite;
+  font-family: "Petit Formal Script", cursive;
+  font-size: 1.95em;
+  font-weight: bold;
+  margin-left: 20em;
+}
+
+.editFormBox {
+  margin-left: 35.5em;
+  color: antiquewhite;
+}
+
+.edit {
+  height: 100%;
+  width: 100vw;
+  background-image: url("./images/room-ga3a77cc76_1280.jpg");
+  background-size: cover;
+}
+
+input.editSubmitButton {
+  color: antiquewhite;
+  background-color: rgb(74, 41, 9);
+}
+
+input.editSubmitButton:hover {
+  color: rgb(253, 249, 5);
+  background-color: rgb(3, 42, 10);
+}
+
+.editCancelButton,
+.newCancelButton {
+  color: black;
+  background-color: rgb(241, 241, 25);
+  margin-left: 11.2em;
+}
+
+.editCancelButton:hover,
+.newCancelButton:hover {
+  background-color: maroon;
+  color: white;
+}
+.editPencil {
+  margin-left: 2em;
+  font-size: 1.3em;
+}
+
+.editFormBox,
+input[type="text"] {
+  width: 24em;
+}
+
+/* .new {
+  height: 90vh;
+  width: 100%;
+  background-image: url("./images/dinner-gb1bbed201_640.jpg");
+  background-size: 100% 100%;
+}
+
+.newformHdg {
+  margin-top: 2em;
+  text-align: center;
+  color: goldenrod;
+  font-family: "Petit Formal Script", cursive;
+}
+
+.newFormBox {
+  margin-left: 35.39em;
+  color: goldenrod;
+  background-color: rgba(39, 17, 3, 0.5);
+}
+
+input.newInput{
+  color: antiquewhite;
+  font-size: 0.9em;
+  background-color: rgba(74, 41, 9, 0.2);
+}
+input.newSubmitButton:hover {
+  color: rgb(253, 249, 5);
+  background-color: rgb(3, 42, 10);
+} */
+
+/* input.newInput {
+  color: antiquewhite;
+  font-size: 0.9em;
+  background-color: rgba(74, 41, 9, 0.2);
+}
+input.newInput:hover {
+  color: rgb(253, 249, 5);
+  background-color: rgb(3, 42, 10);
+} */
+
+/* .errorBox {
+  height: 150vh;
+  width: 100vw;
+  background-color: rgb(4, 47, 7);
+  z-index: 55;
+}
+.errorPic {
+  height: 68vh;
+  width: 45vw;
+  background-image: url("./images/ai-generated-gad8540c7a_1280.png");
+  background-size: cover;
+  margin-left: 27em;
+  z-index: 5;
+}
+.errorHdg {
+  color: rgb(235, 235, 172);
+  text-align: center;
+} */

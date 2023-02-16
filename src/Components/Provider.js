@@ -15,6 +15,7 @@ export function useArchiveContext() {
 export const ArchiveProvider = ({ Children }) => {
   const navigate = useNavigate()
   const API = process.env.REACT_APP_API_URL
+  
   const [games, setGames] = useState({
     title: " ",
     platform: " ",
@@ -42,19 +43,6 @@ export const ArchiveProvider = ({ Children }) => {
       .catch((c) => console.warn("catch", c))
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    setGames(games)
-  }
-  const handleCheckboxChange = () => {
-    setGames({ ...games, digital: !games.digital })
-    setGames({ ...games, present: !games.present })
-  }
-
-  const handleTextChange = (event) => {
-    setGames({ ...games, [event.target.id]: event.target.value })
-  }
-
   return (
     <ArchiveContext.Provider
       value={{
@@ -62,9 +50,6 @@ export const ArchiveProvider = ({ Children }) => {
         axios,
         games,
         setGames,
-        handleCheckboxChange,
-        handleSubmit,
-        handleTextChange,
         addGames,
       }}
     >

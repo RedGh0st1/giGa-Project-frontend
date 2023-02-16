@@ -3,16 +3,16 @@ import ReactDOM from "react-dom/client"
 import "./index.css"
 import App from "./App"
 import { BrowserRouter as Router } from "react-router-dom"
-import { ArchiveProvider } from "./Components/Provider"
+// import { ArchiveProvider } from "./Components/Provider"
 import reportWebVitals from "./reportWebVitals"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <Router>
     <React.StrictMode>
-      <ArchiveProvider>
-        <App />
-      </ArchiveProvider>
+      {/* <ArchiveProvider> */}
+      <App />
+      {/* </ArchiveProvider> */}
     </React.StrictMode>
   </Router>
 )

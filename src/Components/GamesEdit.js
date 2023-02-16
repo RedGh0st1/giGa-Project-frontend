@@ -57,7 +57,7 @@ export default function GamesEdit() {
   ] = games
   return (
     <div className="Edit">
-      <form onSubmit={handleUpdatedSubmit}>
+      <form onSubmit={handleUpdatedSubmit} className="editFormBox">
         <label htmlFor="title">Title:</label>
         <input
           type="text"
@@ -146,10 +146,10 @@ export default function GamesEdit() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" value="Submit" />
+        <input className="EditSubmitButton3" type="submit" value="Submit" />
       </form>
       <Link to={`/games/${id}`}>
-        <button>Back!</button>
+        <button className="editCancelButton">Back!</button>
       </Link>
     </div>
   )

@@ -1,32 +1,59 @@
 import React from "react"
-import { useContext } from "react"
-import { ArchiveContext } from "./Provider"
-
+import { useState, Link } from "react"
+import { useNavigate } from "react-router-dom"
+import axios from "axios"
+const API = process.env.REACT_APP_API_URL
 export default function GamesNew() {
-  const { games, handleCheckboxChange, handleSubmit, handleTextChange } =
-    useContext(ArchiveContext)
-  const [
-    title,
-    platform,
-    genre,
-    number_of_players,
-    esrd_rating,
-    publisher,
-    developer,
-    present,
-    release_date,
-    digital,
-    image,
-    description,
-  ] = games
+  // const {API, games, handleCheckboxChange, handleSubmit, handleTextChange } =
+  //   useContext(ArchiveContext)
+  let navigated = useNavigate()
+  const [games, setGames] = useState({
+    title: " ",
+    platform: " ",
+    genre: " ",
+    number_of_players: " ",
+    esrd_rating: " ",
+    publisher: " ",
+    developer: " ",
+    release_date: " ",
+    present: false,
+    digital: false,
+    image: " ",
+    description: " ",
+  })
+  const addGames = (newGame) => {
+    axios
+      .post(`${API}/games`, newGame)
+      .then(
+        () => {
+          navigated(`/games`)
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c))
+  }
+
+  const handleCheckboxChange = () => {
+    setGames({ ...games, digital: !games.digital })
+    setGames({ ...games, present: !games.present })
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    addGames(games)
+  }
+  const handleTextChange = (event) => {
+    setGames({ ...games, [event.target.id]: event.target.value })
+  }
+
   return (
     <div className="new">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="newFormBox">
         <label htmlFor="title">Title: </label>
         <input
           type="text"
           id="title"
-          value={title}
+          value={games.title}
           onChange={handleTextChange}
           required
         />
@@ -35,7 +62,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="platform"
-          value={platform}
+          value={games.platform}
           onChange={handleTextChange}
         />
 
@@ -43,7 +70,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="genre"
-          value={genre}
+          value={games.genre}
           onChange={handleTextChange}
         />
 
@@ -51,7 +78,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="number_of_players"
-          value={number_of_players}
+          value={games.number_of_players}
           onChange={handleTextChange}
         />
 
@@ -59,7 +86,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="ESRD_rating"
-          value={esrd_rating}
+          value={games.esrd_rating}
           onChange={handleTextChange}
         />
 
@@ -67,7 +94,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="publisher"
-          value={publisher}
+          value={games.publisher}
           onChange={handleTextChange}
         />
 
@@ -75,7 +102,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="developer"
-          value={developer}
+          value={games.developer}
           onChange={handleTextChange}
         />
 
@@ -83,7 +110,7 @@ export default function GamesNew() {
         <input
           type="text"
           id="release_date"
-          value={release_date}
+          value={games.release_date}
           onChange={handleTextChange}
         />
 
@@ -91,25 +118,25 @@ export default function GamesNew() {
         <input
           type="checkbox"
           id="present"
-          value={present}
+          value={games.present}
           onChange={handleCheckboxChange}
-          checked={present}
+          checked={games.present}
         />
 
         <label htmlFor="digital">Digital: </label>
         <input
           type="checkbox"
           id="digital"
-          value={digital}
+          value={games.digital}
           onChange={handleCheckboxChange}
-          checked={digital}
+          checked={games.digital}
         />
 
         <label htmlFor="image"> Image: </label>
         <input
           type="text"
           id="image"
-          value={image}
+          value={games.image}
           onChange={handleTextChange}
         />
 
@@ -117,11 +144,14 @@ export default function GamesNew() {
         <input
           type="text"
           id="description"
-          value={description}
+          value={games.description}
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" value="Submit" />
+        <input className="newInput" type="submit" value="Submit" />
+        <Link to={`/`}>
+          <button className="">Back</button>
+        </Link>
       </form>
     </div>
   )
