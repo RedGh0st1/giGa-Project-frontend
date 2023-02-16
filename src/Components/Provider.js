@@ -1,8 +1,8 @@
 import { createContext, useContext, useState } from "react"
-import axios from "axios"
 import NavBar from "../Components/NavBar"
 import Footer from "./Footer"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
 //  this creates the use custom hook object which can be imported with useContext with data inside of it
 export const ArchiveContext = createContext()

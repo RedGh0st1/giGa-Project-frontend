@@ -3,7 +3,7 @@ import GamesIndex from "../Components/GamesIndex"
 
 export default function Index() {
   return (
-    <div className="indexpage">
+    <div className="Index">
       Index
       <GamesIndex />
     </div>

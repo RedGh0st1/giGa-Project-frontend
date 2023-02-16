@@ -3,7 +3,7 @@ import GamesNew from "../Components/GamesNew"
 
 export default function New() {
   return (
-    <div className="newpage">
+    <div className="New">
       NEW
       <GamesNew />
     </div>

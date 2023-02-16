@@ -1,6 +1,7 @@
 import React from "react"
 import { useEffect, useContext } from "react"
 import { ArchiveContext } from "./Provider"
+import Game from "./Game"
 
 export default function GamesIndex() {
   const { games, setGames, API, axios } = useContext(ArchiveContext)
@@ -14,8 +15,7 @@ export default function GamesIndex() {
 
   return (
     <div className="games">
-      {console.log("I render first")}
-      <h1>My Games Library</h1>
+      <h1>Game Archive</h1>
       <section>
         <table>
           <thead>
@@ -27,7 +27,7 @@ export default function GamesIndex() {
           </thead>
           <tbody>
             {games.map((game) => {
-              return <game key={game.id} game={game} />
+              return <Game key={game.id} game={game} />
             })}
           </tbody>
         </table>
