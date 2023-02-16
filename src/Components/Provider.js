@@ -12,7 +12,7 @@ export function useArchiveContext() {
 }
 
 // this
-export function ArchiveProvider({ Children }) {
+export const ArchiveProvider = ({ Children }) => {
   const navigate = useNavigate()
   const API = process.env.REACT_APP_API_URL
   const [games, setGames] = useState({

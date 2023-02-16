@@ -28,7 +28,7 @@ a {
   color: #8957ab;
 }
 button a {
-  color: antiquewhite;
+  color: rgb(180, 111, 22);
 }
 
 h4 {
@@ -52,7 +52,7 @@ tbody td:not(td:first-of-type):hover {
 }
 
 tbody tr:nth-child(even) {
-  background: #f4eafd;
+  background: #158030;
 }
 
 .New {
