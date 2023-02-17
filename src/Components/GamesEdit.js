@@ -16,8 +16,20 @@ export default function GamesEdit() {
 
   const navigated = useNavigate()
   const { id } = useParams()
-
-  const [games, setGames] = useState([])
+  const [games, setGames] = useState({
+    title: " ",
+    platform: " ",
+    genre: " ",
+    number_of_players: " ",
+    esrd_rating: " ",
+    publisher: " ",
+    developer: " ",
+    release_date: " ",
+    present: false,
+    digital: false,
+    image: " ",
+    description: " ",
+  })
 
   const updatedGames = (updatedGame) => {
     axios
