@@ -35,21 +35,20 @@ export default function GamesShow() {
     <article className="details">
       <>
         <section>
-          <h3>{games.image}</h3>
-          hello
-          <h3>{games.title}</h3>
-          {games.platform}
-          {games.genre}
-          {games.number_of_players}
-          {games.esrd_rating}
-          {games.publisher}
-          {games.developer}
-          {games.release_date}
-          {games.present}
-          {games.digital}
-          {games.description}
+          <p>Image: {games.image}</p>
+          <p>Title: {games.title}</p>
+          <p>Platform: {games.platform}</p>
+          <p>Genre: {games.genre}</p>
+          <p>Number of Players: {games.number_of_players}</p>
+          <p>ESRB Rating: {games.esrb_rating}</p>
+          <p>Publisher: {games.publisher}</p>
+          <p>Developer: {games.developer}</p>
+          <p>Release Date: {games.release_date}</p>
+          <p>Present Status: {games.present}</p>
+          <p>Digital Status: {games.digital}</p>
+          <p>Description: {games.description}</p>
         </section>
-        <div className="navigation">
+        <div className="showNavigation">
           <div>
             <Link to={`/games`}>
               <button>Back</button>

@@ -16,7 +16,7 @@ export default function GamesEdit() {
 
   const navigated = useNavigate()
   const { id } = useParams()
-  // const currentGame = games.find((g) => g.id === gameId)
+
   const [games, setGames] = useState([])
 
   const updatedGames = (updatedGame) => {

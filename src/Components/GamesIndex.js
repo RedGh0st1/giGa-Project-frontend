@@ -25,7 +25,7 @@ export default function GamesIndex() {
             <tr>
               <th></th>
               <th>Take me there</th>
-              <th>See this Games</th>
+              <th> Games</th>
             </tr>
           </thead>
           <tbody>

@@ -22,6 +22,7 @@ export default function GamesNew() {
     image: " ",
     description: " ",
   })
+
   const addGames = (newGame) => {
     axios
       .post(`${API}/games`, newGame)
