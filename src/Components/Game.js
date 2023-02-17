@@ -10,7 +10,7 @@ export default function Game({ game }) {
         </td>
         <td>
           <a href={game.url} target="_blank" rel="noreferrer">
-            {game.name}
+            {game.title}
           </a>
         </td>
         <td>

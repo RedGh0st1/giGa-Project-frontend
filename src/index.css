@@ -91,7 +91,7 @@ input[type="submit"] {
 /* EDit form CSS */
 .editSnackHdg {
   text-align: center;
-  color: antiquewhite;
+  color: rgb(0, 0, 0);
   font-family: "Petit Formal Script", cursive;
   font-size: 1.95em;
   font-weight: bold;
