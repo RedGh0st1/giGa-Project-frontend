@@ -5,7 +5,9 @@ export default function NavBar() {
   return (
     <nav className="nav">
       <h1>
-        <Link to="/">GigA</Link>
+        <Link to="/">
+          <h1>GigA</h1>
+        </Link>
       </h1>
       <Link to="/games">Home</Link>
       <button>
