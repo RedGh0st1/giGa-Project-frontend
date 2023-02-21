@@ -6,5 +6,6 @@ Getting  Started
 
 GigA is a personal gaming archive. It was meant to track and locate each gaming system and video games you have presently at home.
 
-#How to start
-*
+#How to start 
+
+---
