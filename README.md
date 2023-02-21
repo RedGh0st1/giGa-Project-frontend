@@ -29,10 +29,10 @@ Backend -repo (https://github.com/RedGh0st1/Portfolio-project---backend/blob/mai
 
 
 ### Additional
-I would like to slow update this application bi-weekly or once month with more features. So i can allow this applicztion to grow. I want to make this application to be as open source as possible to ui/ux ideas to additional Features. So below i will list once a month or twice a month features that i have added and the date it was completed so you can update your application. Suggesting is always accepted because growth only comes with a community. I want many  people to download learn and benefit from it especially parents with kids.
+ I would like to slow update this application bi-weekly or once month with more features. So i can allow this applicztion to grow. I want to make this application to be as open source as possible to ui/ux ideas to additional Features. So below i will list once a month or twice a month features that i have added and the date it was completed so you can update your application. Suggesting is always accepted because growth only comes with a community. I want many  people to download learn and benefit from it especially parents with kids.
 
 
 
 
 # FUTURE ADDITIONAL FEATURE
-+Search Bar
++ Search Bar
