@@ -34,5 +34,5 @@ I would like to slow update this application bi-weekly or once month with more f
 
 
 
-# FUTURE ADDITIONAl FEATURE
+# FUTURE ADDITIONAL FEATURE
 +Search Bar
