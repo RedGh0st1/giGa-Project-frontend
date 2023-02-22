@@ -42,10 +42,12 @@ export default function GamesNew() {
   const handlePresentboxChange = () => {
     setGames({ ...games, present: !games.present })
   }
+
   const handleSubmit = (event) => {
     event.preventDefault()
     addGames(games)
   }
+
   const handleTextChange = (event) => {
     setGames({ ...games, [event.target.id]: event.target.value })
   }

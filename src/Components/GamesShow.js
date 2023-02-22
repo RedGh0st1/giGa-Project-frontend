@@ -33,10 +33,10 @@ export default function GamesShow() {
   }, [id, navigated])
 
   return (
-    <article className="details">
+    <article className="card">
       <>
         {/* <Show games={games.title} /> */}
-        <section>
+        <section className="cardOne">
           <p>Image: {games.image}</p>
           <p>Title: {games.title}</p>
           <p>Platform: {games.platform}</p>
@@ -54,7 +54,7 @@ export default function GamesShow() {
           {/* need conditional statement to get digital or cd logo */}
           <p>Description: {games.description}</p>
         </section>
-        <div className="showNavigation">
+        <div className="button">
           <div>
             <Link to={`/games`}>
               <button>Back</button>

@@ -46,6 +46,9 @@ export default function GamesEdit() {
 
   const handleCheckboxChange = () => {
     setGames({ ...games, digital: !games.digital })
+  }
+
+  const handlePresentboxChange = () => {
     setGames({ ...games, present: !games.present })
   }
 
@@ -128,7 +131,7 @@ export default function GamesEdit() {
           type="checkbox"
           id="present"
           value={games.present}
-          onChange={handleCheckboxChange}
+          onChange={handlePresentboxChange}
           checked={games.present}
         />
         <label htmlFor="digital">Digital:</label>

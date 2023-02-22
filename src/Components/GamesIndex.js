@@ -17,7 +17,7 @@ export default function GamesIndex() {
   }, [])
 
   return (
-    <div className="games">
+    <div className="card">
       <h1>Game Archive</h1>
       <section>
         <table>
