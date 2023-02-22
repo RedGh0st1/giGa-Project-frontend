@@ -68,7 +68,7 @@ export default function GamesEdit() {
   }
 
   return (
-    <div className="Edit">
+    <div className="form">
       <form onSubmit={handleUpdatedSubmit} className="editFormBox">
         <label htmlFor="title">Title:</label>
         <input

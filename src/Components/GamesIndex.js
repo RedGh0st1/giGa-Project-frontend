@@ -23,8 +23,6 @@ export default function GamesIndex() {
         <table>
           <thead>
             <tr>
-              <th></th>
-              <th>Take me there</th>
               <th> Games</th>
             </tr>
           </thead>
