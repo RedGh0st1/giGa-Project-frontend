@@ -2,6 +2,7 @@ import React from "react"
 import { useEffect, useState } from "react"
 import { useParams, useNavigate, Link } from "react-router-dom"
 import axios from "axios"
+// import Show from "../Pages/Show"
 const API = process.env.REACT_APP_API_URL
 
 export default function GamesShow() {
@@ -34,18 +35,23 @@ export default function GamesShow() {
   return (
     <article className="details">
       <>
+        {/* <Show games={games.title} /> */}
         <section>
           <p>Image: {games.image}</p>
           <p>Title: {games.title}</p>
           <p>Platform: {games.platform}</p>
           <p>Genre: {games.genre}</p>
           <p>Number of Players: {games.number_of_players}</p>
-          <p>ESRB Rating: {games.esrb_rating}</p>
+          <p>ESRD Rating: {games.esrd_rating}</p>
+          {/* need a conditional statement for ESRD-logo */}
           <p>Publisher: {games.publisher}</p>
           <p>Developer: {games.developer}</p>
           <p>Release Date: {games.release_date}</p>
+          {/* need function to get actually date  */}
           <p>Present Status: {games.present}</p>
+          {/* need conditional statement to get logo possible colored check or x */}
           <p>Digital Status: {games.digital}</p>
+          {/* need conditional statement to get digital or cd logo */}
           <p>Description: {games.description}</p>
         </section>
         <div className="showNavigation">

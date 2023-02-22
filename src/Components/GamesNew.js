@@ -37,9 +37,11 @@ export default function GamesNew() {
 
   const handleCheckboxChange = () => {
     setGames({ ...games, digital: !games.digital })
-    setGames({ ...games, present: !games.present })
   }
 
+  const handlePresentboxChange = () => {
+    setGames({ ...games, present: !games.present })
+  }
   const handleSubmit = (event) => {
     event.preventDefault()
     addGames(games)
@@ -121,7 +123,7 @@ export default function GamesNew() {
           type="checkbox"
           id="present"
           value={games.present}
-          onChange={handleCheckboxChange}
+          onChange={handlePresentboxChange}
           checked={games.present}
         />
 

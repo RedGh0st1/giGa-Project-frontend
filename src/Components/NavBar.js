@@ -11,7 +11,7 @@ export default function NavBar() {
       </h1>
       <Link to="/games">Home</Link>
       <button>
-        <Link to="/games/new">Add a game</Link>
+        <Link to="/games/new">Add a new game</Link>
       </button>
     </nav>
   )
