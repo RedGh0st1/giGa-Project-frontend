@@ -9,10 +9,17 @@ export default function NavBar() {
           <h1 className="logo">GigA</h1>
         </Link>
       </h1>
-      <Link to="/games"> List of Games</Link>
-      <button className="add-button">
-        <Link to="/games/new">Add a new game</Link>
-      </button>
+      <div className="movebtn1">
+        <Link to="/games" className="list">
+          {" "}
+          List of Games
+        </Link>
+      </div>
+      <div className="movebtn">
+        <button className="add-button">
+          <Link to="/games/new">Add a new game</Link>
+        </button>
+      </div>
     </nav>
   )
 }

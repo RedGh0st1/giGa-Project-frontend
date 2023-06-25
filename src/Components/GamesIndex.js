@@ -1,12 +1,10 @@
 import React from "react"
 import { useEffect, useState } from "react"
-// import { ArchiveContext } from "./Provider"
 import Game from "./Game"
 import axios from "axios"
 const API = process.env.REACT_APP_API_URL
 
 export default function GamesIndex() {
-  // const { API, axios } = useContext(ArchiveContext)
   const [games, setGames] = useState([])
 
   useEffect(() => {
@@ -19,20 +17,18 @@ export default function GamesIndex() {
   return (
     <div className="card">
       <h1>Game Archive</h1>
-      <section>
-        <table>
-          <thead>
-            <tr>
-              <th> Games</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map((game) => {
-              return <Game key={game.id} game={game} />
-            })}
-          </tbody>
-        </table>
-      </section>
+      <table>
+        <thead>
+          <tr>
+            <th> Games</th>
+          </tr>
+        </thead>
+        <tbody>
+          {games.map((game) => {
+            return <Game key={game.id} game={game} />
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }

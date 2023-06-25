@@ -5,15 +5,6 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
 const API = process.env.REACT_APP_API_URL
 export default function GamesEdit() {
-  // const {
-  //   API,
-  //   axios,
-  //   setGames,
-  //   games,
-  //   handleCheckboxChange,
-  //   handleTextChange,
-  // } = useContext(ArchiveContext)
-
   const navigated = useNavigate()
   const { id } = useParams()
   const [games, setGames] = useState({
@@ -36,7 +27,6 @@ export default function GamesEdit() {
       .put(`${API}/games/${id}`, updatedGame)
       .then(
         () => {
-          console.log("TESTid", id)
           navigated(`/games/${id}`)
         },
         (error) => console.error(error)
@@ -55,6 +45,7 @@ export default function GamesEdit() {
   const handleTextChange = (event) => {
     setGames({ ...games, [event.target.id]: event.target.value })
   }
+
   useEffect(() => {
     axios.get(`${API}/games/${id}`).then(
       (response) => setGames(response.data),

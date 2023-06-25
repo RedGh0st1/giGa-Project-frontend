@@ -1,12 +1,10 @@
 import React from "react"
 import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
-// import { ArchiveContext } from "./Provider"
 import axios from "axios"
 const API = process.env.REACT_APP_API_URL
+
 export default function GamesNew() {
-  // const {API, games, setGames, handleCheckboxChange, handleSubmit, handleTextChange } =
-  //   useContext(ArchiveContext)
   let navigated = useNavigate()
   const [games, setGames] = useState({
     title: " ",

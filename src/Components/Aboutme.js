@@ -5,7 +5,9 @@ export default function Aboutme() {
     <div>
       <h2>Aboutme</h2>
       <p>
-        <span>I am Aspiring Full Stack developer currently in Pursuit.</span>
+        <span>
+          HI My name is Lennie am a Full Stack developer currently in Pursuit.
+        </span>
       </p>
     </div>
   )
