@@ -1,0 +1,37 @@
+.nav {
+  background-color: #c94646;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.nav h1 {
+  margin: 0;
+  flex: 1;
+}
+
+.nav h1 .logo {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav .movebtn {
+  margin-left: 20px;
+}
+
+.nav .list,
+.nav .add-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav .list:hover,
+.nav .add-button:hover {
+  color: #f0f0f0;
+}

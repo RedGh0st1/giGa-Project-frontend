@@ -1,7 +1,7 @@
 import RouteComponent from "./Components/RouteComponent"
 import "./App.css"
-import NavBar from "./Components/NavBar"
-import Footer from "./Components/Footer"
+import NavBar from "./Components/Navbar/NavBar"
+import Footer from "./Components/Footer/Footer"
 
 function App() {
   return (
