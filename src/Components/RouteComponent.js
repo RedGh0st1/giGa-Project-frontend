@@ -7,6 +7,8 @@ import Index from "../Pages/Index"
 import Show from "../Pages/Show"
 import New from "../Pages/New"
 import Error from "../Pages/Error"
+import SignUp from "./SignUp/SignUp"
+import Login from "./Login/Login"
 
 export default function RouteComponent() {
   return (
@@ -16,6 +18,10 @@ export default function RouteComponent() {
       <Route path="/games/new" element={<New />} />
       <Route exact path="/games/:id" element={<Show />} />
       <Route path="/games/:id/edit" element={<Edit />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route />
+      <Route />
       <Route path="*" element={<Error />} />
     </Routes>
   )

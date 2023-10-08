@@ -1,0 +1,60 @@
+.login-container {
+  display: flex;
+  background-image: url("/giga_frontend/src/Assets/57913de86975d27ebab2b2e56d69155c.jpg");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form {
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  position: relative;
+}
+
+.login-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="username"],
+.login-form input[type="password"] {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  order: none;
+  border-radius: 5px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
