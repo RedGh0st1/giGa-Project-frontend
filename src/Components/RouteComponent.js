@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 
 // Pages
 import Edit from "../Pages/Edit"
-import Home from "../Pages/Home"
+import Home from "../Pages/Home/Home"
 import Index from "../Pages/Index"
 import Show from "../Pages/Show"
 import New from "../Pages/New"

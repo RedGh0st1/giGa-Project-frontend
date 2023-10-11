@@ -1,23 +1,61 @@
 .login-container {
   display: flex;
-  background-image: url("/giga_frontend/src/Assets/57913de86975d27ebab2b2e56d69155c.jpg");
-  background-size: cover;
-  background-position: center;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow: hidden; /* to ensure that overlapping parts are clipped*/
+  position: relative;
+  background: #1e1e2e;
+  overflow: hidden;
+}
+
+img,
+.login-form {
+  padding: absolute;
+  top: 10%;
+  height: 80%;
+  width: 50;
+}
+
+img {
+  left: 10%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  color: #ffffff;
+  font-size: 1.5em;
 }
 
 .login-form {
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px 50px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   color: #fff;
-  position: relative;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
-
+.login-form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px; /* This positions the psuedo-element just ouside the form */
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    /* transparent 50%, */ rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none; /* Ensures that this doesnt interfere with interactions*/
+}
 .login-form h1 {
   font-size: 24px;
   margin-bottom: 20px;

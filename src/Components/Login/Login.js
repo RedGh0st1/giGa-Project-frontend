@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import "./Login.css"
+import miles from "../../Assets/miles.jpg"
 
 export default function Login() {
   const [userIdentifier, setuserIdentifier] = useState("")
@@ -20,6 +21,8 @@ export default function Login() {
 
   return (
     <div className="login-container">
+      <img src={miles} alt="miles" />
+      <div className="text"> Welcome!!! join us and have fun!! </div>
       <div className="login-form">
         <h1 className="login_title">LOGIN</h1>
         <form className="username_password_form" onSubmit={handleSubmit}>

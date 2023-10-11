@@ -1,0 +1,4 @@
+.home_scrollable {
+  overflow: auto;
+  height: 100vh;
+}
