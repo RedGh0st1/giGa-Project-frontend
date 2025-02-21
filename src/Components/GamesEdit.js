@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 // import { useContext } from "react"
 // import { ArchiveContext } from "./Provider"
-import { Link, useNavigate, useParams } from "react-router-dom"
-import axios from "axios"
-const API = process.env.REACT_APP_API_URL
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+const API = process.env.REACT_APP_API_URL;
 export default function GamesEdit() {
-  const navigated = useNavigate()
-  const { id } = useParams()
+  const navigated = useNavigate();
+  const { id } = useParams();
   const [games, setGames] = useState({
     title: " ",
     platform: " ",
@@ -20,43 +20,43 @@ export default function GamesEdit() {
     digital: false,
     image: " ",
     description: " ",
-  })
+  });
 
   const updatedGames = (updatedGame) => {
     axios
       .put(`${API}/games/${id}`, updatedGame)
       .then(
         () => {
-          navigated(`/games/${id}`)
+          navigated(`/games/${id}`);
         },
         (error) => console.error(error)
       )
-      .catch((c) => console.console.warn("catch", c))
-  }
+      .catch((c) => console.console.warn("catch", c));
+  };
 
   const handleCheckboxChange = () => {
-    setGames({ ...games, digital: !games.digital })
-  }
+    setGames({ ...games, digital: !games.digital });
+  };
 
   const handlePresentboxChange = () => {
-    setGames({ ...games, present: !games.present })
-  }
+    setGames({ ...games, present: !games.present });
+  };
 
   const handleTextChange = (event) => {
-    setGames({ ...games, [event.target.id]: event.target.value })
-  }
+    setGames({ ...games, [event.target.id]: event.target.value });
+  };
 
   useEffect(() => {
     axios.get(`${API}/games/${id}`).then(
       (response) => setGames(response.data),
       (error) => navigated(`/not-found`)
-    )
-  }, [id, navigated])
+    );
+  }, [id, navigated]);
 
   const handleUpdatedSubmit = (event) => {
-    event.preventDefault()
-    updatedGames(games, id)
-  }
+    event.preventDefault();
+    updatedGames(games, id);
+  };
 
   return (
     <div className="form">
@@ -155,5 +155,5 @@ export default function GamesEdit() {
         <button className="editCancelButton">Back!</button>
       </Link>
     </div>
-  )
+  );
 }

@@ -1,16 +1,32 @@
 body {
-  display: grid;
-  flex-direction: column;
   margin: 0;
-  /* overflow: hidden; */
 }
 
 .container {
+  height: 100vh;
   display: grid;
-  flex-direction: column;
+  grid: auto 2fr auto / 100px 1fr 100px;
 }
 
-.scrollable {
-  overflow-y: scroll;
-  height: 100vh;
+.home_head,
+.sidebar_head,
+.footer_head,
+.home_head,
+.navbar_head,
+.left_sidebar_container {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid: repeat(5, 1fr) / 1fr;
+  }
+
+  .navbar_head,
+  .footer_head,
+  .sidebar_head,
+  main,
+  .right-sidebar {
+    grid-column: 1 / 2;
+  }
 }

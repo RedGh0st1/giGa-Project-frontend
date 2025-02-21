@@ -1,46 +1,5 @@
-.nav {
-  background-color: #c94646;
-  color: #ffffff;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between; /* To spread navbar contents across the full width */
-  align-items: center;
-}
-
-.nav h1 {
-  margin: 0;
-  flex: 1; /* This ensures the logo takes up as much space as possible, pushing other elements to the right */
-}
-
-.nav h1 .logo {
-  margin: 0;
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav .movebtn1,
-.nav .movebtn,
-.nav .auth-buttons {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Adjusts spacing between navbar elements */
-}
-
-.nav .list,
-.nav .add-button,
-.nav .login,
-.nav .signup {
-  text-decoration: none;
-  color: #fff;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.nav .list:hover,
-.nav .add-button:hover,
-.nav .login:hover,
-.nav .signup:hover {
-  color: #f0f0f0;
+.navbar_head {
+  grid-column: 1/4;
+  /* background-color: blue; */
+  border: 1px solid red;
 }

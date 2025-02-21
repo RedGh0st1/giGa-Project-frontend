@@ -1,10 +1,13 @@
-.Footer {
-  background-color: #f0f0f0;
-  padding: 1px;
-  text-align: center;
-  margin-top: 550px;
+.footer_head {
+  grid-column: 1/4;
+  /* background-color: blue; */
+  border: 1px solid black;
 }
 
-.Footer p {
-  margin: 0;
+.footer_body {
+  grid-column: 1/4;
+  /* background-color: green; */
+  /* border: 1px solid black; */
+  text-align: center;
+  justify-content: center;
 }
